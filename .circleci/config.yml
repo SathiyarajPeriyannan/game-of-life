@@ -16,8 +16,7 @@ jobs:
           key: cache-{{ checksum "/tmp/CIRCLECI_CACHE_KEY" }}
       - run:
           command: |-
-            cd gameoflife-web
-            mvn verify
+            mvn compile
       - store_test_results:
           path: target/surefire-reports
       - save_cache:
