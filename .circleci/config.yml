@@ -22,7 +22,7 @@ jobs:
           docker_layer_caching: true
       - run:
           command: |-
-            cp gameoflife-web/target/gameoflife-1.0.*.war gameoflife-web/target/gameoflife.war
+            cp gameoflife-web/target/gameoflife*.war gameoflife-web/target/gameoflife.war
             TAG=0.1.$CIRCLE_BUILD_NUM
             docker build -t CircleCI-Public/gameoflife:$TAG .
       - save_cache:
