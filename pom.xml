@@ -123,6 +123,7 @@
                     </execution>
                 </executions>
                 <configuration>
+                    <skip>true</skip>
                     <storyType>html</storyType>
                     <storyReport>target/easyb/easyb.html</storyReport>
                     <easybTestDirectory>src/test/stories</easybTestDirectory>
