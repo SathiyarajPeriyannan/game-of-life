@@ -15,7 +15,7 @@ jobs:
       - run:
           command: |-
             mvn clean test
-            mvn install deploy -Dbuild.number=${CIRCLE_BUILD_NUM} -DskipTests
+            mvn install -Dbuild.number=${CIRCLE_BUILD_NUM} -DskipTests
       - store_test_results:
           path: target/surefire-reports
       - setup_remote_docker:
