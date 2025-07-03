@@ -14,7 +14,7 @@ jobs:
           key: cache-{{ checksum "/tmp/CIRCLECI_CACHE_KEY" }}
       - run:
           command: |-
-            mvn clean test -Dmaven.test.failure.ignore=true -DskipTests
+            mvn clean test
       - store_test_results:
           path: target/surefire-reports
       - save_cache:
